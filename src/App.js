@@ -1,4 +1,11 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  color: darkviolet;
+  &:hover {
+    color: purple;
+  }
+`;
 
 const Father = styled.div`
   display: flex;
@@ -6,51 +13,15 @@ const Father = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
-`;
-
-const animation = keyframes`
-  0% {
-    transform:rotate(0deg);
-    border-radius:0px;
-  }
-  50% {
-    transform:rotate(360deg);
-    border-radius:100px;
-  }
-  100% {
-    transform:rotate(0deg);
-    border-radius:0px;
+  ${Title}:hover {
+    font-size: 99px;
   }
 `;
 
-const Emoji = styled.span`
-  font-size: 100px;
-`;
-
-const Box = styled.div`
-  height: 200px;
-  width: 200px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: ${animation} 1s linear infinite;
-  ${Emoji} {
-    &:hover {
-      font-size: 200px;
-    }
-    &:active {
-      opacity: 0;
-    }
-  }
-`;
 function App() {
   return (
     <Father>
-      <Box>
-        <Emoji as="F">❤️</Emoji>
-      </Box>
-      <Emoji>💔</Emoji>
+      <Title>안녕하세요</Title>
     </Father>
   );
 }
