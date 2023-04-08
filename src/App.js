@@ -1,10 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Title = styled.h1`
-  color: darkviolet;
-  &:hover {
-    color: purple;
-  }
+  color: ${(props) => props.theme.textColor};
 `;
 
 const Father = styled.div`
@@ -13,9 +10,7 @@ const Father = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
-  ${Title}:hover {
-    font-size: 99px;
-  }
+  backgroundcolor: ${(props) => props.theme.backgroundColor};
 `;
 
 function App() {
