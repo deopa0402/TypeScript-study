@@ -10,7 +10,7 @@ const Father = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
-  backgroundcolor: ${(props) => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 function App() {
