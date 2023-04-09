@@ -8,10 +8,19 @@ const H1 = styled.h1`
   color: ${(props) => props.theme.textColor};
 `;
 
+interface DummyProps {
+  text: string;
+  other?: boolean;
+}
+
+function Dummy({ text, other = true }: DummyProps) {
+  return <H1>{text}</H1>;
+}
+
 function App() {
   return (
     <Container>
-      <H1>pro</H1>
+      <Dummy text="안뇽!" />
     </Container>
   );
 }
