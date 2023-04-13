@@ -7,6 +7,7 @@ function Root() {
     <div>
       <Header />
       <Outlet />
+      <h1>Hello Root</h1>
     </div>
   );
 }
