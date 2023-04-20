@@ -11,6 +11,7 @@ function User() {
       <hr />
       <Link to="Followers">See Followers</Link>
       <Outlet />
+      {/* outlet 을 이용한 하위 자식 구조 */}
     </div>
   );
 }
