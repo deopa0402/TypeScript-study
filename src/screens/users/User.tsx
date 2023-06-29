@@ -10,7 +10,10 @@ function User() {
       </h1>
       <hr />
       <Link to="Followers">See Followers</Link>
-      <Outlet />
+      <Outlet context={{
+        nameOfMyUser: users[Number(userId) - 1].name,
+      }}
+      />
       {/* outlet 을 이용한 하위 자식 구조 */}
     </div>
   );
